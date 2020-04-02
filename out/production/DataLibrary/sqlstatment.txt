@@ -1,0 +1,14 @@
+mysql>grant select,insert,update,delete,create,drop on vtdc.employee to joe@10.163.225.87 identified by ‘123′;
+给来自10.163.225.87的用户joe分配可对数据库vtdc的employee表进行select,insert,update,delete,create,drop等操作的权限，并设定口令为123。
+
+mysql>grant all privileges on vtdc.* to joe@10.163.225.87 identified by ‘123′;
+给来自10.163.225.87的用户joe分配可对数据库vtdc所有表进行所有操作的权限，并设定口令为123。
+
+mysql>grant all privileges on *.* to joe@10.163.225.87 identified by ‘123′;
+给来自10.163.225.87的用户joe分配可对所有数据库的所有表进行所有操作的权限，并设定口令为123。
+
+mysql>grant all privileges on *.* to joe@localhost identified by ‘123′;
+给本机用户joe分配可对所有数据库的所有表进行所有操作的权限，并设定口令为123。
+
+alter table student add constraint stu_name primary key(stu_name);
+
